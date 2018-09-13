@@ -4,16 +4,21 @@
   "description": "ReactJS PWA for weather data",
   "scripts": {
     "start": "webpack --config webpack.config.js",
+    "serve": "webpack-dev-server --config webpack.config.js --open",
     "clean": "rimraf ./dist"
   },
   "author": "Mike Hansford",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-react-css-modules": "^3.4.2",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "chalk": "^2.4.1",
     "css-loader": "^1.0.0",
     "eslint": "^5.5.0",
+    "eslint-plugin-react": "^7.11.1",
     "eslint-watch": "^4.0.2",
     "express": "^4.16.3",
     "html-webpack-plugin": "^3.2.0",
@@ -24,10 +29,12 @@
     "rimraf": "^2.6.2",
     "style-loader": "^0.23.0",
     "webpack": "^4.18.0",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8"
   },
   "dependencies": {
     "lodash": "^4.17.11",
-    "webpack-cli": "^3.1.0"
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   }
 }
