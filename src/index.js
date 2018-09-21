@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Shell from './Shell';
+import registerServiceWorker from './registerServiceWorker';
 
 const root = document.querySelector('#app');
-ReactDOM.render(<App />, root);
+ReactDOM.render(<Shell />, root);
+registerServiceWorker();
