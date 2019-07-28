@@ -3,6 +3,7 @@ import path from 'path';
 import open from 'open';
 import webpack from 'webpack';
 import config from '../webpack.config.js';
+import sampleData from '../sample_data/sampleForecast';
 
 var port = 3000;
 var app = express();
@@ -14,7 +15,11 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }));
 
 app.get('/', function(req, res){
-	res.sendFile(path.joinn(__dirname, '../src/index.html'));
+	res.sendFile(path.join(__dirname, '../src/index.html'));
+});
+
+app.get('/forecast', function(req, res){
+	res.json(sampleData.forecasts);
 });
 
 app.listen(port, function(err){

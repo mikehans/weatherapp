@@ -4,7 +4,7 @@ import Temperature from './Temperature';
 export default function MinMax(props) {
 	return (
 		<div>
-		<Temperature val={props.min} /> / <Temperature val={props.max} />
+		Min/Max: <Temperature val={props.min} /> / <Temperature val={props.max} />
 		</div>
 	);
 }
